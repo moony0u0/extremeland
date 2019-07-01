@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title> EXTREME LAND </title>
+	<link rel="stylesheet" href="css/animate.css" />
+	<link rel="stylesheet" href="css/default.css" />
+	<script src="js/jquery-2.2.4.min.js"></script>
+	<script src="js/ui.js"></script>
+        <style>
+    h1#extremeland_logo { margin: 0; }
+    </style>
+</head>
+<body class="index">
+	<!-- s: header -->
+	<header id="header_container">
+		<div class="header_inner">
+			<h1 id="extremeland_logo"  class="logo"><a href="index_movie.html" onclick="extremeLand.index_movie;"><img src="images/img_logo01.png" width="204" height="64" alt="Extreme Land" /></a></h1>
+			<nav class="gnb_wrap">
+				<ul>
+					<li><a href="north.html">북극</a></li>
+					<li><a href="south.html" class="on">남극</a></li>
+					<li><a href="glacier.html">빙하</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<!-- e: header -->
+
+	<!-- s: body -->
+	<section id="body_container" class="south_page">
+
+
+		<link rel="stylesheet" href="css/jquery.fullpage.css" />
+		<script src="js/jquery.fullpage.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				// one page
+				$('#fullpage').fullpage({
+					sectionSelector: '.content_section',
+					anchors: ['intro', 'section01', 'section02', 'section03'],
+					menu: '#pageNavi',
+					afterLoad: function(link, idx){
+						var $section01 = $(".content01");
+						var $section02 = $(".content02");
+						var $section03 = $(".content03");
+						var $layer01 = $section01.find(".layer.snow");
+						var $layer02_01 = $section02.find(".layer.station");
+						var $layer02_02 = $section02.find(".layer.cont");
+						var $layer03 = $section03.find(".animal .layer");
+
+						$layer01.css("opacity",0);
+						$layer02_01.css("opacity",0);
+						$layer02_02.css("opacity",0);
+						$layer03.css("opacity",0);
+
+						switch(idx) {
+							case 2 : section01(); break;
+							case 3 : section02(); break;
+							case 4 : section03(); break;
+						}
+
+						function section01(){
+							extremeLand.motion($layer01, "fadeSnow infinite");
+						}
+						function section02(){
+							extremeLand.motion($layer02_01, "scaleUp");
+							extremeLand.motion($layer02_02, "fadeInRight");
+						}
+						function section03(){
+							extremeLand.motion($layer03, "scaleUp");
+						}
+					}
+				});
+			});
+		</script>
+
+		<div id="fullpage" style="height:100%; box-sizing:border-box;">
+			<!-- s: intro -->
+			<section class="content_section intro">
+				<div class="inner">
+					<div class="layer title animated scaleUp"><img src="images/south/layer_intro01.png" /></div>
+					<div class="layer animal animated bounceInUp"><img src="images/south/layer_intro02.png" /></div>
+					<div class="layer animal animated bounceInUp"><img src="images/south/layer_intro03.png" /></div>
+				</div>
+			</section>
+			<!-- e: intro -->
+			<!-- s: content -->
+			<section class="content_section content01">
+				<div class="inner">
+					<div class="layer snow"><img src="images/south/layer_section01_01.png" /></div>
+					<div class="layer bg"><img src="images/south/layer_section01_02.png" /></div>
+					<div class="layer title"><img src="images/south/layer_section01_03.png" /></div>
+				</div>
+			</section>
+			<!-- e: content -->
+			<!-- s: content -->
+			<section class="content_section content02">
+				<div class="inner">
+					<div class="layer cloud animated floatsWave"><img src="images/south/layer_section02_01.png" /></div>
+					<div class="layer station"><img src="images/south/layer_section02_02.png" /></div>
+					<div class="layer cont"><img src="images/south/layer_section02_03.png" /></div>
+					<div class="layer info"><img src="images/south/layer_section02_04.png" /></div>
+				</div>
+			</section>
+			<!-- e: content -->
+            
+            
+            
+            
+			<!-- s: content -->
+            <!--
+			<section class="content_section content03">
+				<div class="inner">
+					<div class="layer cloud floatsCloud"><img src="images/south/layer_section03_01.png" /></div>
+					<div class="animal">
+						<a href="#none" class="layer animal01"><img src="images/south/layer_section03_02_01.png" /></a>
+						<a href="#none" class="layer animal02"><img src="images/south/layer_section03_02_02.png" /></a>
+						<a href="#none" class="layer animal03"><img src="images/south/layer_section03_02_03.png" /></a>
+						<a href="#none" class="layer animal04"><img src="images/south/layer_section03_02_04.png" /></a>
+					</div>
+                    
+                    
+                    
+					<div class="popup_wrap">
+						<div class="p_inner">
+							<img src="images/south/img_popup01.png" width="1450" height="680" class="cont" />
+							<img src="images/south/img_popup02.png" width="1450" height="680" class="cont" />
+							<img src="images/south/img_popup03.png" width="1450" height="680" class="cont" />
+							<img src="images/south/img_popup04.png" width="1450" height="680" class="cont" />
+							<a href="#none" class="p_close">닫기</a>
+						</div>
+					</div>
+				</div>
+			</section>
+-->
+			<!-- e: content -->
+            
+            
+            
+            
+            
+            
+             <!-- s: content -->
+            <section class="content_section content03">
+                <div class="inner">
+                    <div class="layer cloud floatsCloud"><img src="images/south/layer_section03_01.png" /></div>
+					
+                    <div class="animal">
+                        <a href="#none" class="layer animal01"><img src="images/south/layer_section03_02_01.png" /></a>
+                        <a href="#none" class="layer animal02"><img src="images/south/layer_section03_02_02.png" /></a>
+                        <a href="#none" class="layer animal03"><img src="images/south/layer_section03_02_03.png" /></a>
+                        <a href="#none" class="layer animal04"><img src="images/south/layer_section03_02_04.png" /></a>
+                    </div>
+        
+
+                    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+                    <!--페이지 네번째에서 이미지 사이즈 조절하고 싶을때 단축키 쓰자!-->
+                    <div class="popup_wrap">
+                        <div class="p_inner w3-section">
+                            <img src="images/north/left_arrow.png" class="w3-button w3-display-left" onclick="plusDivs(-1)" id="left-arrow"/>
+
+
+                            <img src="images/south/img_popup01.png" width="1090.9" height="500" class="cont mySlides" />
+                            <img src="images/south/img_popup02.png" width="1090.9" height="500" class="cont mySlides" />
+                            <img src="images/south/img_popup03.png" width="1090.9" height="500" class="cont mySlides" />
+                            <img src="images/south/img_popup04.png" width="1090.9" height="500" class="cont mySlides" />
+
+
+
+                            <img src="images/north/right_arrow.png" class="w3-button w3-display-right" onclick="plusDivs(1)" id="right-arrow"/>
+                            <a href="#none" class="p_close">닫기</a>
+
+                            <script>
+                                var slideIndex = 1;
+                                showDivs(slideIndex);
+
+                                function plusDivs(n) {
+                                    showDivs(slideIndex += n);
+                                }
+
+                                function showDivs(n) {
+                                    var i;
+                                    var x = document.getElementsByClassName("mySlides");
+                                    if (n > x.length) {
+                                        slideIndex = 1
+                                    }
+                                    if (n < 1) {
+                                        slideIndex = x.length
+                                    }
+                                    for (i = 0; i < x.length; i++) {
+                                        x[i].style.display = "none";
+                                    }
+                                    x[slideIndex - 1].style.display = "block";
+                                }
+                            </script>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <!-- e: content -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+		</div>
+
+		<!-- s: 네비게이션 -->
+		<div class="pageNavi_wrap">
+			<ul id="pageNavi">
+				<li data-menuanchor="intro"><a href="#intro"><span>intro</span></a></li>
+				<li data-menuanchor="section01"><a href="#section01"><span>1page</span></a></li>
+				<li data-menuanchor="section02"><a href="#section02"><span>2page</span></a></li>
+				<li data-menuanchor="section03"><a href="#section03"><span>3page</span></a></li>
+			</ul>
+		</div>
+		<!-- e: 네비게이션 -->
+
+	</section>
+	<!-- e: body -->
+
+</body>
+</html>

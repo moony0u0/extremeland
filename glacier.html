@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title> EXTREME LAND </title>
+	<link rel="stylesheet" href="css/animate.css" />
+	<link rel="stylesheet" href="css/default.css" />
+	<script src="js/jquery-2.2.4.min.js"></script>
+	<script src="js/ui.js"></script>
+</head>
+<body class="index">
+
+	<!-- s: header -->
+	<header id="header_container">
+		<div class="header_inner">
+			<h1 class="logo"><a href="index_movie.html" onclick="extremeLand.index_movie;"><img src="images/img_logo01.png" width="204" height="64" alt="Extreme Land" /></a></h1>
+			<nav class="gnb_wrap">
+				<ul>
+					<li><a href="north.html">북극</a></li>
+					<li><a href="south.html">남극</a></li>
+					<li><a href="glacier.html" class="on">빙하</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<!-- e: header -->
+
+
+
+
+
+
+	<!-- s: body -->
+	<section id="body_container" class="glacier_page">
+
+
+		<link rel="stylesheet" href="css/jquery.fullpage.css" />
+		<script src="js/jquery.fullpage.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				// one page
+				$('#fullpage').fullpage({
+					sectionSelector: '.content_section',
+					anchors: ['intro', 'section01', 'section02'],
+					menu: '#pageNavi',
+					afterLoad: function(link, idx){
+						var $section02 = $(".content02");
+						var $layer02 = $section02.find(".cont .layer");
+
+						$layer02.css("opacity",0);
+
+						switch(idx) {
+							case 3 : section02(); break;
+						}
+
+						function section02(){
+							extremeLand.motion($layer02, "scaleUp");
+						}
+					}
+				});
+			});
+		</script>
+
+		<div id="fullpage" style="height:100%; box-sizing:border-box;">
+			<!-- s: intro -->
+			<section class="content_section intro">
+				<div class="inner">
+					<div class="layer melt animated slideInDown"><img src="images/glacier/layer_intro01.png" /></div>
+					<div class="layer title animated fadeInDown"><img src="images/glacier/layer_intro02.png" /></div>
+					<div class="layer animal animated fadeInUp"><img src="images/glacier/layer_intro03.png" /></div>
+				</div>
+			</section>
+			<!-- e: intro -->
+			<!-- s: content -->
+			<section class="content_section content01">
+				<div class="inner">
+				<div class="layer melt animated slideInUp">
+				<img src="images/glacier/layer_intro01.png" /></div>
+				
+					<div class="layer title animated fadeInUp"><img src="images/glacier/layer_intro04.png" /></div>
+					
+				</div>
+			</section>
+			<!-- e: content -->
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			<!-- s: content -->
+			<section class="content_section content02">
+				<div class="inner">
+					<div class="layer title"><img src="images/glacier/layer_section02_01.png" /></div>
+					<ul class="cont">
+						<li class="layer ct01"><img src="images/glacier/layer_section02_02_01.png" /></li>
+						<li class="layer ct02"><img src="images/glacier/layer_section02_02_02.png" /></li>
+						<li class="layer ct03"><img src="images/glacier/layer_section02_02_03.png" /></li>
+						<li class="layer ct04"><img src="images/glacier/layer_section02_02_04.png" /></li>
+						<li class="layer ct05"><img src="images/glacier/layer_section02_02_05.png" /></li>
+						<li class="layer ct06"><img src="images/glacier/layer_section02_02_06.png" /></li>
+					</ul>
+				</div>
+			</section>
+			<!-- e: content -->
+		</div>
+
+		<!-- s: 네비게이션 -->
+		<div class="pageNavi_wrap">
+			<ul id="pageNavi">
+				<li data-menuanchor="intro"><a href="#intro"><span>intro</span></a></li>
+				<li data-menuanchor="section01"><a href="#section01"><span>1page</span></a></li>
+				<li data-menuanchor="section02"><a href="#section02"><span>2page</span></a></li>
+			</ul>
+		</div>
+		<!-- e: 네비게이션 -->
+
+	</section>
+	<!-- e: body -->
+
+</body>
+</html>
